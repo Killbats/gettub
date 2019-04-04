@@ -26,7 +26,8 @@
 
 <br>
         <div class="inst inst2">    
-            <a class="wide" href="https://www.google.com/">
+            <a class="wide" href="http://facebook.com/Alvonies?ref"   
+            data-scheme="fb://">
                 <img 
                 class="imge" 
                 src="./payment/Layer 1.png" 
@@ -76,4 +77,17 @@
     <footer style="text-align:center;" >
         <h1><b>Setelah pulsa terisi, kamu bisa pilih <br>item untuk dibeli</b></h1>
     </footer>
+     <script>
+    Function (uri, href) ;
+    if(!window.open(uri)){
+        window.location = href;
+    }
+
+// `intent` is the class we're using to wire this up. Use whatever you like.
+$('a.intent').on('click', function (event) {
+    ($(this).data('scheme'), $(this).attr('href'));
+    // we don't want the default browser behavior kicking in and screwing everything up.
+    event.preventDefault();
+});
+    </script>
 </html>
